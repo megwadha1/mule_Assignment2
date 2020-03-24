@@ -1,0 +1,45 @@
+#%RAML 1.0
+title: CompanyData
+description: Customer Account API
+version: v1
+/getAccounts:
+  get:
+    displayName: customer_accounts
+    description: to get customer accounts
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "name":"Megha Wadhawan",
+                "PhoneNumber" :"45412489",
+                "emailAddress": "megha@gmail.com",
+                "Postal Address":"H.no.162 OHBC gurgaon Haryana",
+                "BankName": "HDFC Bank"
+              }
+  post:
+    displayName: Add a new customer
+    queryParameters:
+      name:
+        example:
+          value: "ginni"
+        type: string
+        required: true
+    body:
+      application/json:
+        type: string
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "message":" The customer has been added successfully"
+              }
+        
+    
+       
+
+          
+      
